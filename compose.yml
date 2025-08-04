@@ -3,6 +3,10 @@ services:
     image: 676883487825.dkr.ecr.ap-northeast-2.amazonaws.com/rookie-server:latest
     ports:
       - 8080:8080
+    environment:
+      DB_URL: ${DB_URL}
+      RDS_USER_NAME: ${RDS_USER_NAME}
+      RDS_USER_PW: ${RDS_USER_PW}
     depends_on:
       my-cache-server:
         condition: service_healthy

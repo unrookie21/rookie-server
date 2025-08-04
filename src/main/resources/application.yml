@@ -11,3 +11,8 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
+  data:
+    redis:
+      host: my-cache-server
+      port: 6379
+

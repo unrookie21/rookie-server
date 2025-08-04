@@ -1,0 +1,17 @@
+services:
+  rookie-server:
+    image: 676883487825.dkr.ecr.ap-northeast-2.amazonaws.com/rookie-server:latest
+    ports:
+      - 8080:8080
+    depends_on:
+      my-cache-server:
+        condition: service_healthy
+
+  my-cache-server:
+    image: redis
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval : 5s
+      retries: 10

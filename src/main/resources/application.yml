@@ -1,20 +1,11 @@
 spring:
-  datasource:
-    url: ${DB_URL}
-    username: ${RDS_USER_NAME}
-    password: ${RDS_USER_PW}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: local
+
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: create
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-    hibernate:
-      ddl-auto: update
-  data:
-    redis:
-      host: my-cache-server
-      port: 6379
-
-
-

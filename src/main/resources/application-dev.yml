@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${RDS_USER_NAME}
+    password: ${RDS_USER_PW}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  data:
+    redis:
+      host: my-cache-server
+      port: 6379

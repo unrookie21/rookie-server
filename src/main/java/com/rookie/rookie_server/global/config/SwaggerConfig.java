@@ -1,4 +1,4 @@
-package com.rookie.rookie_server.global;
+package com.rookie.rookie_server.global.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
